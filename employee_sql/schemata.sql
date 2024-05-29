@@ -25,7 +25,7 @@ CREATE TABLE employees (
     birth_date date NOT NULL,
     first_name character varying(100) NOT NULL,
     last_name character varying(100) NOT NULL,
-    sex character varying(1)NOT NULL,
+    sex character(1)NOT NULL,
     hire_date date NOT NULL,
 	FOREIGN KEY (emp_title_id) REFERENCES titles (title_id)
 );
