@@ -39,6 +39,7 @@ CREATE TABLE dept_employees (
 	PRIMARY KEY (emp_no, dept_no)
 );
 
+-- for this one i created the composite key since columns are not unique
 CREATE TABLE dept_manager (
 	dept_no character varying(4) NOT NULL,
     emp_no integer PRIMARY KEY NOT NULL,
