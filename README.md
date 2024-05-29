@@ -20,7 +20,7 @@ EDR/:
 
 ### entity_relationship_diagram.png: 
 A PNG image of the Entity Relationship Diagram (ERD) exported from QuickDBD. This diagram visually represents the database structure, showing the relationships between different entities.
-Additional Resources
+
 
 ## Help
 tutoring_session_with_Brandon/
