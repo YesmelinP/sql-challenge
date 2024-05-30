@@ -7,14 +7,16 @@ SELECT employees.emp_no,
 	salaries.salary
 FROM employees
 JOIN salaries 
-	ON employees.emp_no = salaries.emp_no;
+	ON employees.emp_no = salaries.emp_no
+ORDER BY employees.emp_no ASC;
 
 -- List the first name, last name, and hire date for the employees who were hired in 1986.
 SELECT first_name, 
 	last_name, 
 	hire_date
 FROM employees
-WHERE EXTRACT (YEAR FROM hire_date) = 1986;
+WHERE EXTRACT (YEAR FROM hire_date) = 1986
+ORDER BY hire_date ASC;
 
 -- List the manager of each department along with their department number, department name, employee number, last name, and first name.
 SELECT dept_manager.emp_no, 
@@ -26,7 +28,8 @@ FROM dept_manager
 JOIN departments 
 	ON dept_manager.dept_no = departments.dept_no
 JOIN employees 
-	ON dept_manager.emp_no = employees.emp_no;
+	ON dept_manager.emp_no = employees.emp_no
+ORDER BY dept_manager.emp_no ASC;
 
 -- List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
 
@@ -61,7 +64,8 @@ SELECT dept_name,
 	first_name, 
 	last_name
 FROM departments_and_employees
-WHERE  dept_name = 'Sales';
+WHERE  dept_name = 'Sales'
+ORDER BY emp_no ASC	;
 
 -- List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
@@ -71,7 +75,8 @@ SELECT dept_name,
 	last_name
 FROM departments_and_employees
 WHERE  dept_name = 'Sales'
-	OR dept_name = 'Development';
+	OR dept_name = 'Development'
+ORDER BY emp_no ASC;
 
 -- List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 
