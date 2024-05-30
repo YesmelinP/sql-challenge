@@ -7,7 +7,7 @@ SELECT employees.emp_no,
 	salaries.salary
 FROM employees
 JOIN salaries 
-	ON employees.emp_no = salaries.emp_no
+	ON employees.emp_no = salaries.emp_no	
 ORDER BY employees.emp_no ASC;
 
 -- List the first name, last name, and hire date for the employees who were hired in 1986.
